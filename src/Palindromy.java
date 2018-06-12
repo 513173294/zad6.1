@@ -11,16 +11,19 @@ public class Palindromy {
 
         }
 
-//        for (int aTablica : tablica){
-//            System.out.print(aTablica + ", ");
-//        }
-
         String tab = Arrays.toString(tablica);
-        System.out.print(tab+ " ");
+        System.out.println(tab + " ");
 
-        for (int i = tablica.length - 1; i < tablica.length; i--) {
+        int x = tablica.length - 1;
+
+        for (int i = 0; i < tablica.length; i++) {
             System.out.print(tablica[i] + ", ");
-            if (i == 0) break;
+            while (i == tablica.length - 1) {
+                System.out.print(tablica[x] + ", ");
+                x--;
+                if (x < 0) break;
+            }
+
         }
     }
 }
